@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""The Airbnb console"""
+
 import cmd
 import shlex
 import models
@@ -15,6 +17,8 @@ classes = {"Amenity": Amenity, "BaseModel": BaseModel, "Place": Place,
 
 
 class HBNBCommand(cmd.Cmd):
+    """"principal class"""
+    
     prompt = "(hbnb) "
 
     def do_quit(self, inp):
@@ -114,42 +118,8 @@ class HBNBCommand(cmd.Cmd):
                 if not new_list:
                     return
                 print(new_list)
-
-    """def do_update(self, inp):
-        method to update attributes of the model
-        arguments = inp.split()
-        list_intances = storage.all()
-
-        # If the class name is missing, print
-        if len(arguments) == 0:
-            print("** class name missing **")
-            return
-        # If the class name doesn’t exist, print
-        elif arguments[0] not in classes:
-            print("** class doesn't exist **")
-            return
-        # If the id is missing
-        elif len(arguments) == 1:
-            print("** instance id missing **")
-            return
-        # If the instance of the class name doesn’t exist for the id
-        elif len(arguments) == 2:
-            print("** attribute name missing **")
-            return
-        # If the value for the attribute name doesn’t exist
-        elif len(arguments) == 3:
-            print("** value missing **")
-            return
-        else:
-            key = arguments[0] + "." + arguments[1]
-            if key in list_intances:
-                k_object = list_intances[key]
-                setattr(k_object, arguments[2], arguments[3])
-                storage.save()
-                storage.reload()
-            else:
-                print("** no instance found **")"""
-
+                
+                
     def do_update(self, argum):
         """ update an instance based on its UUID """
         models.storage.reload()
