@@ -18,7 +18,7 @@ classes = {"Amenity": Amenity, "BaseModel": BaseModel, "Place": Place,
 
 class HBNBCommand(cmd.Cmd):
     """"principal class"""
-    
+
     prompt = "(hbnb) "
 
     def do_quit(self, inp):
@@ -118,8 +118,7 @@ class HBNBCommand(cmd.Cmd):
                 if not new_list:
                     return
                 print(new_list)
-                
-                
+
     def do_update(self, argum):
         """ update an instance based on its UUID """
         models.storage.reload()
