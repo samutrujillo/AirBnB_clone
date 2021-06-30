@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""All the content of the FileStorage class""" 
+""" All the content of the FileStorage class """
 
 import json
 from models.base_model import BaseModel
