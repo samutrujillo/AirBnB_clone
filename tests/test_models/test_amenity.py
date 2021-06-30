@@ -1,16 +1,27 @@
 #!/usr/bin/python3
-"""Test Module Amenity"""
-
+import sys
 import unittest
+import pep8
+from models.amenity import Amenity
 
 
-class TestAmenity(unittest.TestCase):
-    """Class Amenity from BaseModel"""
+class Test_AmenityModel(unittest.TestCase):
+    """ Test the amenity model class """
 
-    def test_demo(self):
-        """ Test_demo """
-        self.assertTrue(True)
+    def testpep8(self):
+        """ testing codestyle """
+        pepstylecode = pep8.StyleGuide(quiet=True)
+        user_path = 'models/amenity.py'
+        result = pepstylecode.check_files([user_path])
+
+    def setUp(self):
+        self.model = Amenity()
+        self.model.save()
+
+    def test_Amenity_initialization(self):
+        self.assertTrue(hasattr(self.model, "name"))
+        self.assertEqual(self.model.name, "")
 
 
-if __name__ == "__name__":
+if __name__ == '__main__':
     unittest.main()

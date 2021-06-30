@@ -1,15 +1,31 @@
 #!/usr/bin/python3
 """ Test Module State """
 
+import sys
 import unittest
+import pep8
+from models.state import State
 
 
-class TestState(unittest.TestCase):
-    """ Class State from BaseModel """
+class Test_StateModel(unittest.TestCase):
+    """ test the State model """
 
-    def test_demo(self):
-        """ Test_demo """
-        self.assertTrue(True)
+    def testpep8(self):
+        """ testing codestyle """
+        pepstylecode = pep8.StyleGuide(quiet=True)
+        user_path = 'models/state.py'
+        result = pepstylecode.check_files([user_path])
 
-if __name__ == "__name__":
+    def setUp(self):
+        self.model_test = State()
+        self.model_test.save()
+
+    def test_StateInstantiation(self):
+        """[testing]"""
+        self.assertIsInstance(self.model_test, State)
+        self.assertTrue(hasattr(self.model_test, "name"))
+        self.assertEqual(self.model_test.name, "")
+
+
+if __name__ == '__main__':
     unittest.main()
