@@ -152,6 +152,16 @@ class HBNBCommand(cmd.Cmd):
             else:
                 print("** no instance found **")
 
+    def count(self, arg):
+        """Count instances"""
+        count = 0
+        arg_list = arg.split(' ')
+        for key in models.storage.all():
+            obj_class = models.storage.all()[key]
+            if arg_list[0] == obj_class.__class__.__name__:
+                count += 1
+        print(count)
+
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
