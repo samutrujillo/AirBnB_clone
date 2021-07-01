@@ -17,6 +17,7 @@ class Test_StateModel(unittest.TestCase):
         result = pepstylecode.check_files([user_path])
 
     def setUp(self):
+        """ Method setUp """
         self.model_test = State()
         self.model_test.save()
 
