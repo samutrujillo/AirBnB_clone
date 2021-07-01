@@ -10,9 +10,3 @@ _This project consists of making a clone of the original page <a href="https://w
 No|Files|Description
 :---:|:---|:---:
 1|[README.md](./README.md)| It contains all the information about the project and all its content.
-
-
-### Authors. <img src="https://image.flaticon.com/icons/png/512/25/25231.png" width="25" height="25">
-
-- *Samuel Trujillo* : [@samutrujillo](https://github.com/samutrujillo)
-- *Sergio Ramos* : [@Sergioarg](https://github.com/Sergioarg)
