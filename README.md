@@ -59,6 +59,25 @@ _You can use the console in two mode in an **interactive** mode and **non-intera
 - create
 - destroy
 
+_Example how to use this commands._
+
+```console
+> all🔮
+(hbnb) all MyModel
+** class doesn't exist **
+> show 👀
+(hbnb) show BaseModel
+** instance id missing **
+(hbnb) show BaseModel Holberton
+** no instance found **
+> create ✏️
+(hbnb) create BaseModel
+49faff9a-6318-451f-87b6-910505c55907
+> all🔮
+(hbnb) all BaseModel
+["[BaseModel] (49faff9a-6318-451f-87b6-910505c55907) {'created_at': datetime.datetime(2017, 10, 2, 3, 10, 2
+```
+
 ### 🗃 - Folders and files
 
 | Folders            | Description                             |
