@@ -2,7 +2,7 @@
 
 # Project: AirBnB clone - The Console
 
-_This project consists of making a clone of the original page <a href="https://www.airbnb.com/">AirBnB Clone</a>, in this folder we create a console Where we will manage and manipulate the JSON file where the information of the Basemodel object will be handled._
+_This project consists of making a clone of the original page <a target="_blank" href="https://www.airbnb.com/">AirBnB Clone</a>, in this folder we create a console Where we will manage and manipulate the JSON file where the information of the Basemodel object will be handled._
 
 # Console
 
