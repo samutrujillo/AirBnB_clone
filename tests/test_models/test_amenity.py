@@ -15,10 +15,12 @@ class Test_AmenityModel(unittest.TestCase):
         result = pepstylecode.check_files([user_path])
 
     def setUp(self):
+        """ Method setUp """
         self.model = Amenity()
         self.model.save()
 
     def test_Amenity_initialization(self):
+        """ Mothod test_Amenity_initialization """
         self.assertTrue(hasattr(self.model, "name"))
         self.assertEqual(self.model.name, "")
 
