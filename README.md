@@ -10,28 +10,43 @@ _You can use the console in two mode in an **interactive** mode and **non-intera
 
 - See the examples.
 
+### Interactive mode.
+
+```bash
+$ ./console.py
+(hbnb) help
+
+Documented commands (type help <topic>):
+========================================
+EOF  help  quit
+
+(hbnb)
+(hbnb)
+(hbnb) quit
+```
+
 ### Non-interactive mode.
 
-```Python
-    $ echo "help" | ./console.py
-    (hbnb)
+```bash
+$ echo "help" | ./console.py
+(hbnb)
 
-    Documented commands (type help <topic>):
-    ========================================
-    EOF  help  quit
-    (hbnb)
-    $
-    $ cat test_help
-    help
-    $
-    $ cat test_help | ./console.py
-    (hbnb)
+Documented commands (type help <topic>):
+========================================
+EOF  help  quit
+(hbnb)
+$
+$ cat test_help
+help
+$
+$ cat test_help | ./console.py
+(hbnb)
 
-    Documented commands (type help <topic>):
-    ========================================
-    EOF  help  quit
-    (hbnb)
-    $
+Documented commands (type help <topic>):
+========================================
+EOF  help  quit
+(hbnb)
+$
 ```
 
 ### Storage
