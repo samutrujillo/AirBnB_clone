@@ -4,6 +4,7 @@
 import cmd
 import shlex
 import models
+from models import storage
 from models.base_model import BaseModel
 from models.amenity import Amenity
 from models.place import Place
@@ -96,28 +97,17 @@ class HBNBCommand(cmd.Cmd):
                 print("** no instance found **")
                 return
 
-    def do_all(self, argum):
-        """Display all instances based on class name"""
-        models.storage.reload()
-        if len(argum) < 1:
-            new_list = []
-            for value in models.storage.all().values():
-                new_list.append(str(value))
-            if not new_list:
+    def do_all(self, arg):
+        """ Prints all elements in storage by class name
+         Usage: all or all <class_name> or <class_name>.all()
+        """
+        class_name = None
+        if len(arg) > 0:
+            class_name = self.validate_class_name(arg)
+            if not class_name:
                 return
-            print(new_list)
-        else:
-            modelClass = argum.split(" ")
-            if modelClass[0] not in classes:
-                print("** class doesn't exist **")
-            elif modelClass[0] in classes:
-                new_list = []
-                for value in models.storage.all().values():
-                    if modelClass[0] in value.__class__.__name__:
-                        new_list.append(str(value))
-                if not new_list:
-                    return
-                print(new_list)
+            # filter data
+        storage.print(class_name)
 
     def do_update(self, argum):
         """ update an instance based on its UUID """
